@@ -1,2 +1,6 @@
 # Memory-Card-Game---Match-Pairs
-Game of memory , pure HTML, CSS, JS
+
+### About
+- Game of memory (other names: Concentration, Match Match, Match Up, Pelmanism, Shinkei-suijaku, Pexeso or Pairs);
+- Completely in HTML, CSS and vanilla JavaScript;
+
