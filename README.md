@@ -1,5 +1,7 @@
 # Memory-Card-Game---Match-Pairs
 
+![](readme/screen.jpg)
+
 ### About
 -------------
 - Game of memory (other names: Concentration, Match Match, Match Up, Pelmanism, Shinkei-suijaku, Pexeso or Pairs);
