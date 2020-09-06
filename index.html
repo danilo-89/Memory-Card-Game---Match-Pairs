@@ -1,0 +1,284 @@
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Memory Card Game</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+
+
+  <div class="combo-container">
+    <div id="combo" style="opacity:0"><img src="./images/combo.png" alt="combo letters" /></div>
+  </div>
+  
+  <div class="header">
+  </div>
+  
+  <div id="playground">
+  
+    <div class="card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        </div>
+        <div class="flip-card-back">
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        </div>
+        <div class="flip-card-back">
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        </div>
+        <div class="flip-card-back">
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        </div>
+        <div class="flip-card-back">
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        </div>
+        <div class="flip-card-back">
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        </div>
+        <div class="flip-card-back">
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        </div>
+        <div class="flip-card-back">
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        </div>
+        <div class="flip-card-back">
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        </div>
+        <div class="flip-card-back">
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        </div>
+        <div class="flip-card-back">
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        </div>
+        <div class="flip-card-back">
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        </div>
+        <div class="flip-card-back">
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        </div>
+        <div class="flip-card-back">
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        </div>
+        <div class="flip-card-back">
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        </div>
+        <div class="flip-card-back">
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        </div>
+        <div class="flip-card-back">
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        </div>
+        <div class="flip-card-back">
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        </div>
+        <div class="flip-card-back">
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        </div>
+        <div class="flip-card-back">
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        </div>
+        <div class="flip-card-back">
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        </div>
+        <div class="flip-card-back">
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        </div>
+        <div class="flip-card-back">
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        </div>
+        <div class="flip-card-back">
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        </div>
+        <div class="flip-card-back">
+        </div>
+      </div>
+    </div>
+  
+  </div>
+  
+  <div class="footer">
+  
+    <div class="counter">Moves: <span id="clickedId"></span></div>
+  
+    <input type="checkbox" id="mute" class="muteBtn" name="mute" unchecked>
+    <label for="mute"></label>
+  
+    <button class="startButton noselect" onclick="startGame()">Start New Game</button>
+  
+  </div>
+  
+  <div id="finishScreen" style="display:none">
+    <div class="fSSmall">
+      <div class="fSWhite">
+        <span class="exitBtn noselect" onclick="closeFScreen()">X</span>
+        <div class="fSPiece1">
+          <h1>Good job!</h1>
+          <span>Thanks to you, all the animals are free.</span>
+        </div>
+        <div class="fSPiece2">
+          <span>Total: <span id="movesSpan"></span> moves in <span id="timeSpan"></span> seconds.</span>
+          <br>
+          <span class="orange">Least moves: <span id="bMovesSpan">?</span> <br /> Best time: <span id="bTimeSpan">?</span> seconds</span>
+  
+        </div>
+      </div>
+  
+      <img class="fSImg" src="./images/apprentice.png" alt="young wizard apprentice" />
+    </div>
+  
+  </div>
+  
+  <div id="startScreen" class="start-screen">
+  
+    <div class="sSInside clearfix">
+  
+      <div class="teacherTxt zoomIn">The evil wizard has captured the animals. It's up to you, my trustful apprentice, to free them. Use your skill to find pairs of all animals and break the evil spell.<br />Good luck! <button class="startButton noselect" onclick="closeSScreen()">I'm Ready!</button></div>
+  
+      <img class="teacherImg" src="./images/wizard.png" alt="wizard teacher" />
+  
+    </div>
+    <button class="startButton noselect creditsBtn" onclick="showCredits()"> Info&amp;Credits</button>
+    <div id="infoScreen" class="info-screen" style="display:none;">
+      My first vanilla Javacript project.
+  
+      <img class="infoImg" src="./images/icons-02.png" alt="icons of Html, CSS and JavaScript" />
+  
+      Graphics:
+      <br />
+      <a href="https://pixabay.com/users/graphicmama-team-2641041/" target="_blank">Pixabay/GraphicMama-team</a>
+      <br />
+      <a href="https://pixabay.com/vectors/cheese-cheezy-charcuterie-5202701/" target="_blank">Pixabay/rfind</a>
+      <br />
+      <a href="https://pixabay.com/illustrations/wordpress-joomla-drupal-bootstrap-3288420/" target="_blank">Pixabay/Fauna</a>
+  
+      <span class="exitBtn exitBtn2 noselect" onclick="hideCredits()">X</span>
+    </div>
+  
+  </div>
+  
+  <audio id="audioContainer" src="./sound/click.mp3" preload="auto"></audio>
+ 
+
+
+<script type="text/javascript" src="./js.js"></script>
+</body>
+</html>
