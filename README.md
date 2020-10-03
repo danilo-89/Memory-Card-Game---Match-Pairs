@@ -13,6 +13,10 @@
 -------------
 ![](readme/preview.gif)
 
+### Demo
+-------------
+[Match Pairs](https://match-pairs.000webhostapp.com/)
+
 ### Credits
 -------------
 Used CSS Animations:
@@ -23,8 +27,3 @@ Used graphics:
 - [Pixabay/GraphicMama-team (most of images)](https://pixabay.com/users/graphicmama-team-2641041/)
 - [Pixabay/rfind (back of the cards)](https://pixabay.com/vectors/cheese-cheezy-charcuterie-5202701/)
 - [Pixabay/Fauna (css, html, js icons)](https://pixabay.com/illustrations/wordpress-joomla-drupal-bootstrap-3288420/)
-
-
-### See it live
--------------
-[Match Pairs](https://match-pairs.000webhostapp.com/)
