@@ -40,6 +40,14 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 10px);
+}
+
+.container {
+  width: 100%;
 }
 
 img {
