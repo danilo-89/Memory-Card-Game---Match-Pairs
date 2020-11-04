@@ -222,14 +222,14 @@
     <input type="checkbox" id="mute" class="muteBtn" name="mute" unchecked>
     <label for="mute"></label>
   
-    <button class="startButton noselect" onclick="startGame()">Start New Game</button>
+    <button class="startButton noselect" id="startBtn2">Start New Game</button>
   
   </div>
 </div>
   <div id="finishScreen" style="display:none">
     <div class="fSSmall">
       <div class="fSWhite">
-        <span class="exitBtn noselect" onclick="closeFScreen()">X</span>
+        <span class="exitBtn noselect" id="closeBtn">X</span>
         <div class="fSPiece1">
           <h1>Good job!</h1>
           <span>Thanks to you, all the animals are free.</span>
@@ -251,12 +251,12 @@
   
     <div class="sSInside clearfix">
   
-      <div class="teacherTxt zoomIn">The evil wizard has captured the animals. It's up to you, my trustful apprentice, to free them. Use your skill to find pairs of all animals and break the evil spell.<br />Good luck! <button class="startButton noselect" onclick="closeSScreen()">I'm Ready!</button></div>
+      <div class="teacherTxt zoomIn">The evil wizard has captured the animals. It's up to you, my trustful apprentice, to free them. Use your skill to find pairs of all animals and break the evil spell.<br />Good luck! <button class="startButton noselect" id="startBtn">I'm Ready!</button></div>
   
       <img class="teacherImg" src="./images/wizard.png" alt="wizard teacher" />
   
     </div>
-    <button class="startButton noselect creditsBtn" onclick="showCredits()"> Info&amp;Credits</button>
+    <button class="startButton noselect creditsBtn" id="showCreditsBtn"> Info&amp;Credits</button>
     <div id="infoScreen" class="info-screen" style="display:none;">
       My first vanilla Javacript project.
   
@@ -270,7 +270,7 @@
       <br />
       <a href="https://pixabay.com/illustrations/wordpress-joomla-drupal-bootstrap-3288420/" target="_blank">Pixabay/Fauna</a>
   
-      <span class="exitBtn exitBtn2 noselect" onclick="hideCredits()">X</span>
+      <span class="exitBtn exitBtn2 noselect" id="exitBtn">X</span>
     </div>
   
   </div>

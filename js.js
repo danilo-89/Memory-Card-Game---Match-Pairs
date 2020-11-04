@@ -1,19 +1,29 @@
-var arr = [1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12,12];
-var crdClick = 0;
-var countClick = 0;
-var elements = "";
-var first = "";
-var second = "";
-var cardClass = "";
-var cardSound = document.getElementById("audioContainer");
-var cardsLeft = 12;
-var timeStart = 0;
-var timeEnd = 0;
-var combo = 0;
+let arr = [1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12,12];
+let crdClick = 0;
+let countClick = 0;
+let elements = "";
+let first = "";
+let second = "";
+let cardClass = "";
+let cardSound = document.getElementById("audioContainer");
+let cardsLeft = 12;
+let timeStart = 0;
+let timeEnd = 0;
+let combo = 0;
+const exitBtn = document.getElementById("exitBtn");
+const startBtn = document.getElementById("startBtn");
+const startBtn2 = document.getElementById("startBtn2");
+const closeBtn = document.getElementById("closeBtn");
+const showCreditsBtn = document.getElementById("showCreditsBtn");
+
+
+
+
+
 
 // Test IF LocalStorage is accessible
 function lsTest() {
-  var test = "test";
+  let test = "test";
   try {
     localStorage.setItem(test, test);
     localStorage.removeItem(test);
@@ -31,29 +41,29 @@ function funcCombo(num) {
   document.getElementById("combo").classList.add("bounceIn");
 }
 
-var finishScreen = document.getElementById("finishScreen");
-var startScreen = document.getElementById("startScreen");
-var infoScreen = document.getElementById("infoScreen");
+let finishScreen = document.getElementById("finishScreen");
+let startScreen = document.getElementById("startScreen");
+let infoScreen = document.getElementById("infoScreen");
 
-var hideCredits = function () {
+let hideCredits = function () {
   infoScreen.style.display = "none";
 };
 
-var showCredits = function () {
+let showCredits = function () {
   infoScreen.style.display = "block";
 };
 
-var closeSScreen = function () {
+let closeSScreen = function () {
   startScreen.style.display = "none";
 };
 
-var closeFScreen = function () {
+let closeFScreen = function () {
   finishScreen.style.display = "none";
   startGame();
 };
 
 // START (New) GAME
-var startGame = function () {
+let startGame = function () {
   crdClick = 0;
   cardsLeft = 12;
   document.getElementById("clickedId").innerHTML = 0;
@@ -61,27 +71,34 @@ var startGame = function () {
   second = "";
 
   // Randomize cards
-  arr.sort(() => Math.random() - 0.5);
+  arr.sort(function () {
+    return Math.random() - 0.5;
+  });
+
+
 
   console.log(arr);
 
   cardClass = document.getElementById("playground").childNodes;
 
-  var i = 0;
+  let i = 0;
   let nodes = document.getElementById("playground").children;
   // console.log(nodes.length);
 
-  for (let node of nodes) {
-    node.childNodes[1].classList.remove("flip");
+  let sNum = 0;
+  for (sNum = 0; sNum<24; sNum++) {
+    nodes[sNum].childNodes[1].classList.remove("flip");
     // console.log(node);
   }
 
   setTimeout(function () {
-    for (let node of nodes) {
-      node.childNodes[1].classList.remove("flip");
-      node.classList.remove("rotate");
-      node.style.visibility = "visible";
-      node.className = "card" + arr[i];
+    let nNum = 0;
+    for (nNum = 0; nNum<24; nNum++) {
+      console.log(nodes[nNum]);
+      nodes[nNum].childNodes[1].classList.remove("flip");
+      nodes[nNum].classList.remove("rotate");
+      nodes[nNum].style.visibility = "visible";
+      nodes[nNum].className = "card" + arr[i];
       i = i + 1;
       // console.log(node);
     }
@@ -221,4 +238,27 @@ Array.prototype.forEach.call(cardClass, function (element) {
       this.childNodes[1].classList.add("flip");
     }
   });
+});
+
+
+
+
+exitBtn.addEventListener("click", function() {
+  hideCredits();
+});
+
+startBtn.addEventListener("click", function() {
+  closeSScreen();
+});
+
+showCreditsBtn.addEventListener("click", function() {
+  showCredits();
+});
+
+closeBtn.addEventListener("click", function() {
+  closeFScreen();
+});
+
+startBtn2.addEventListener("click", function() {
+  startGame();
 });
