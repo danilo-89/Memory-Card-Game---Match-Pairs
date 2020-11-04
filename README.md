@@ -2,6 +2,10 @@
 
 ![](readme/screen.jpg)
 
+### Demo
+-------------
+[Match Pairs](https://match-pairs.000webhostapp.com/)
+
 ### About
 -------------
 - Game of memory (other names: Concentration, Match Match, Match Up, Pelmanism, Shinkei-suijaku, Pexeso or Pairs);
@@ -12,10 +16,6 @@
 ### Preview
 -------------
 ![](readme/preview.gif)
-
-### Demo
--------------
-[Match Pairs](https://match-pairs.000webhostapp.com/)
 
 ### Credits
 -------------
