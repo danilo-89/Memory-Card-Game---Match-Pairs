@@ -7,8 +7,31 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="./style.css">
 
+<style>
+  #se-pre-con {
+      position: fixed;
+      left: 0px;
+      top: 0px;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      bottom: 0;
+      z-index: 9999;
+      background-color: white;
+  }
+</style>
+
 </head>
+
 <body>
+
+  <div id="se-pre-con">Loading...</div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.getElementById("se-pre-con").style.display="none";
+    }, false);
+  </script>
 
 <div class="container">
   <div class="combo-container">
@@ -16,6 +39,7 @@
   </div>
   
   <div class="header">
+    <p class="pTime">Time: <span id="spanTime">0</span></p>
   </div>
   
   <div id="playground">
@@ -232,7 +256,7 @@
         <span class="exitBtn noselect" id="closeBtn">X</span>
         <div class="fSPiece1">
           <h1>Good job!</h1>
-          <span>Thanks to you, all the animals are free.</span>
+          <span class="pText">Thanks to you, all the animals are free.</span>
         </div>
         <div class="fSPiece2">
           <span>Total: <span id="movesSpan"></span> moves in <span id="timeSpan"></span> seconds.</span>
@@ -251,7 +275,9 @@
   
     <div class="sSInside clearfix">
   
-      <div class="teacherTxt zoomIn">The evil wizard has captured the animals. It's up to you, my trustful apprentice, to free them. Use your skill to find pairs of all animals and break the evil spell.<br />Good luck! <button class="startButton noselect" id="startBtn">I'm Ready!</button></div>
+      <div class="teacherTxt zoomIn">
+        <p class="pText">The evil wizard has captured the animals. It's up to you, my trustful apprentice, to free them. Use your skill to find pairs of all animals and break the evil spell.<br />Good luck!</p>
+        <button class="startButton noselect" id="startBtn">I'm Ready!</button></div>
   
       <img class="teacherImg" src="./images/wizard.png" alt="wizard teacher" />
   
@@ -280,5 +306,8 @@
 
 
 <script type="text/javascript" src="./js.js"></script>
+
+
+
 </body>
 </html>

@@ -10,13 +10,13 @@ let cardsLeft = 12;
 let timeStart = 0;
 let timeEnd = 0;
 let combo = 0;
+
+const playBackground = document.getElementById("playground");
 const exitBtn = document.getElementById("exitBtn");
 const startBtn = document.getElementById("startBtn");
 const startBtn2 = document.getElementById("startBtn2");
 const closeBtn = document.getElementById("closeBtn");
 const showCreditsBtn = document.getElementById("showCreditsBtn");
-
-
 
 
 
@@ -35,7 +35,7 @@ function lsTest() {
 
 // Show and hide Combo popup
 function funcCombo(num) {
-  console.log("combo: " + num);
+  // console.log("combo: " + num);
   document.getElementById("combo").classList.remove("bounceIn");
   void document.getElementById("combo").offsetWidth;
   document.getElementById("combo").classList.add("bounceIn");
@@ -62,8 +62,38 @@ let closeFScreen = function () {
   startGame();
 };
 
+
+// Game timer display
+
+let secCount = 0;
+let active = false;
+let idIntv;
+const stoper = document.getElementById('spanTime');
+
+const timer = function() {
+  if (!active) {
+      active = !active;
+      idIntv = setInterval(start, 10);
+  } 
+}
+
+const start = function() {
+  secCount++;
+  stoper.textContent = (secCount/ 100).toFixed(0);
+}
+
+const reset = function() {
+  secCount = 0;
+  active = false;
+  stoper.textContent = '0';
+  clearInterval(idIntv);
+}
+// ------------------------
+
+
 // START (New) GAME
 let startGame = function () {
+  reset();
   crdClick = 0;
   cardsLeft = 12;
   document.getElementById("clickedId").innerHTML = 0;
@@ -77,7 +107,7 @@ let startGame = function () {
 
 
 
-  console.log(arr);
+  // console.log(arr);
 
   cardClass = document.getElementById("playground").childNodes;
 
@@ -112,13 +142,13 @@ Array.prototype.forEach.call(cardClass, function (element) {
   element.addEventListener("mousedown", function () {
     // WHEN FIRST CARD IS CLICKED TWO TIMES IN A ROW
     if (first != "" && first == this) {
-      console.log(this.className + " (first card) already clicked!");
+      // console.log(this.className + " (first card) already clicked!");
       return;
     }
 
     // WHEN SECOND CARD IS CLICKED TWO TIMES IN A ROW
     else if (second != "" && second == this) {
-      console.log(this.className + " (second card) already clicked!");
+      // console.log(this.className + " (second card) already clicked!");
       return;
     }
 
@@ -133,12 +163,13 @@ Array.prototype.forEach.call(cardClass, function (element) {
     // Get the start time
     if (crdClick === 1) {
       timeStart = Math.round(new Date() / 1000);
-      console.log(timeStart);
+      timer();
+      // console.log(timeStart);
     }
 
     document.getElementById("clickedId").innerHTML = crdClick;
 
-    console.log(crdClick);
+    // console.log(crdClick);
 
     // WHEN NEW CARD IS OPENED AND FIRST AND SECOND CARDS HAVE ALREADY BEEN OPENED
     if (first != "" && second != "") {
@@ -155,7 +186,7 @@ Array.prototype.forEach.call(cardClass, function (element) {
     else if (first != "" && second == "") {
       second = this;
       this.childNodes[1].classList.add("flip");
-      console.log("two cards opened");
+      // console.log("two cards opened");
 
       // CHECK IF FIRST AND SECOND CARDS ARE THE SAME
       if (first.className === second.className) {
@@ -164,8 +195,8 @@ Array.prototype.forEach.call(cardClass, function (element) {
         if (combo > 1) {
           funcCombo(combo);
         }
-        console.log("combo is: " + combo);
-        console.log("yesss!");
+        // console.log("combo is: " + combo);
+        // console.log("yesss!");
         const fFinish = first;
         const sFinish = second;
 
@@ -181,6 +212,7 @@ Array.prototype.forEach.call(cardClass, function (element) {
 
         // CHECK IF THERE ARE NO MORE CARDS (IF GAME IS FINISHED)
         if (cardsLeft < 1) {
+          reset();
           document.getElementById("movesSpan").innerHTML = crdClick;
           timeEnd = Math.round(new Date() / 1000) - timeStart;
           document.getElementById("timeSpan").innerHTML = timeEnd;
@@ -214,7 +246,7 @@ Array.prototype.forEach.call(cardClass, function (element) {
           finishScreen.style.display = "block";
         }
       } else {
-        console.log("not same");
+        // console.log("not same");
         combo = 0;
         const checkCClick = crdClick;
         const fFinish = first;
@@ -224,7 +256,7 @@ Array.prototype.forEach.call(cardClass, function (element) {
           if (crdClick === checkCClick) {
             fFinish.childNodes[1].classList.remove("flip");
             sFinish.childNodes[1].classList.remove("flip");
-            console.log("now");
+            // console.log("now");
             first = "";
             second = "";
           }
@@ -262,3 +294,22 @@ closeBtn.addEventListener("click", function() {
 startBtn2.addEventListener("click", function() {
   startGame();
 });
+
+
+
+// Fix card reveal bug on window resize
+
+var doit;
+function resizedw(){
+  playBackground.style.opacity = "1";
+}
+window.onresize = function() {
+  playBackground.style.opacity = "0";
+    clearTimeout(doit);
+    doit = setTimeout(function() {
+        resizedw();
+    }, 250);
+};
+
+
+
