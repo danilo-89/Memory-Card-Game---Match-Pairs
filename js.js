@@ -5,7 +5,8 @@ let elements = "";
 let first = "";
 let second = "";
 let cardClass = "";
-let cardSound = document.getElementById("audioContainer");
+let cardSound1 = document.getElementById("audioContainer1");
+let cardSound2 = document.getElementById("audioContainer2");
 let cardsLeft = 12;
 let timeStart = 0;
 let timeEnd = 0;
@@ -152,12 +153,21 @@ Array.prototype.forEach.call(cardClass, function (element) {
       return;
     }
 
-    // Check if MUTE is on
+    // Check if MUTE is on, else play click sound
     if (document.getElementById("mute").checked) {
     } else {
-      cardSound.play();
+      // Make sounds overlap when clicking too fast
+      if (crdClick%2===0) {
+        cardSound1.play();
+        console.log(1)
+      } else {
+        cardSound2.play();
+        console.log(2)
+      }
+
     }
 
+    // Count card clicks
     crdClick = crdClick + 1;
 
     // Get the start time
