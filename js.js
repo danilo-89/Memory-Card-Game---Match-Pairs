@@ -299,17 +299,25 @@ startBtn2.addEventListener("click", function() {
 
 // Fix card reveal bug on window resize
 
-// var doit;
-// function resizedw(){
-//   playBackground.style.opacity = "1";
-// }
-// window.onresize = function() {
-//   playBackground.style.opacity = "0";
-//     clearTimeout(doit);
-//     doit = setTimeout(function() {
-//         resizedw();
-//     }, 250);
-// };
+function detectMob() {
+  return (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+}
+
+
+var doit;
+function resizedw(){
+  playBackground.style.opacity = "1";
+}
+window.onresize = function() {
+  if(detectMob()==false) {
+    playBackground.style.opacity = "0";
+    clearTimeout(doit);
+    doit = setTimeout(function() {
+        resizedw();
+    }, 250);
+  }
+
+};
 
 
 
