@@ -1,0 +1,15 @@
+
+
+.flip-card-front:hover {
+  border-collapse: separate;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: 1px solid gray;
+  border-radius: 17px;
+}
+
+.exitBtn:hover {
+  border-collapse: separate;
+  -webkit-box-shadow: 0 4px 8px 0 gray;
+  box-shadow: 0 4px 8px 0 gray;
+}

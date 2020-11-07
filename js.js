@@ -79,7 +79,7 @@ const timer = function() {
 
 const start = function() {
   secCount++;
-  stoper.textContent = (secCount/ 100).toFixed(0);
+  stoper.textContent = Math.round(new Date() / 1000) - timeStart;
 }
 
 const reset = function() {
@@ -124,7 +124,7 @@ let startGame = function () {
   setTimeout(function () {
     let nNum = 0;
     for (nNum = 0; nNum<24; nNum++) {
-      console.log(nodes[nNum]);
+      // console.log(nodes[nNum]);
       nodes[nNum].childNodes[1].classList.remove("flip");
       nodes[nNum].classList.remove("rotate");
       nodes[nNum].style.visibility = "visible";

@@ -7,17 +7,33 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="./style.css">
 
+<script type="text/javascript">
+  if(/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) {
+    document.write('<link rel="stylesheet" href="./style-IE.css">');
+  }
+</script>
+
+
 <style>
   #se-pre-con {
       position: fixed;
       left: 0px;
-      top: 0px;
       width: 100%;
       height: 100%;
       top: 0;
       bottom: 0;
       z-index: 9999;
       background-color: white;
+      display: flex;
+  }
+
+  #se-pre-con > p {
+    text-align: center;
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 25px;
+    padding: 10px;
   }
 </style>
 
@@ -25,10 +41,15 @@
 
 <body>
 
-  <div id="se-pre-con">Loading...</div>
+  <div id="se-pre-con">
+    <p><b>Game loading...</b><br>
+      <span id="noscriptmsg">Please enable JavaScript.</span>
+    </p> 
+  </div>
 
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
+      document.getElementById("noscriptmsg").style.display="none";
+    window.addEventListener('load', function() {
       document.getElementById("se-pre-con").style.display="none";
     }, false);
   </script>
