@@ -299,17 +299,17 @@ startBtn2.addEventListener("click", function() {
 
 // Fix card reveal bug on window resize
 
-var doit;
-function resizedw(){
-  playBackground.style.opacity = "1";
-}
-window.onresize = function() {
-  playBackground.style.opacity = "0";
-    clearTimeout(doit);
-    doit = setTimeout(function() {
-        resizedw();
-    }, 250);
-};
+// var doit;
+// function resizedw(){
+//   playBackground.style.opacity = "1";
+// }
+// window.onresize = function() {
+//   playBackground.style.opacity = "0";
+//     clearTimeout(doit);
+//     doit = setTimeout(function() {
+//         resizedw();
+//     }, 250);
+// };
 
 
 
