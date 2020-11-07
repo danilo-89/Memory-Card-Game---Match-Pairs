@@ -66,7 +66,6 @@ let closeFScreen = function () {
 
 // Game timer display
 
-let secCount = 0;
 let active = false;
 let idIntv;
 const stoper = document.getElementById('spanTime');
@@ -79,12 +78,10 @@ const timer = function() {
 }
 
 const start = function() {
-  secCount++;
   stoper.textContent = Math.round(new Date() / 1000) - timeStart;
 }
 
 const reset = function() {
-  secCount = 0;
   active = false;
   stoper.textContent = '0';
   clearInterval(idIntv);
