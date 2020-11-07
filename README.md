@@ -11,7 +11,7 @@
 - Game of memory (other names: Concentration, Match Match, Match Up, Pelmanism, Shinkei-suijaku, Pexeso or Pairs);
 - Completely in HTML, CSS and vanilla JavaScript;
 - Responsive design;
-- Tested and working on Chrome, Firefox, Edge, IE Opera and Brave.
+- Tested and working on Chrome, Firefox, Edge, IE, Opera and Brave.
 
 ### Preview
 -------------
