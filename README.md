@@ -2,9 +2,8 @@
 
 ![](readme/screen.jpg)
 
-### [Match Pairs](https://match-pairs.000webhostapp.com/)
+### Se it live [Match Pairs](https://match-pairs.000webhostapp.com/)
 -------------
-[Match Pairs](https://match-pairs.000webhostapp.com/)
 
 ### About
 -------------
