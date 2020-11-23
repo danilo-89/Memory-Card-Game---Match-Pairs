@@ -2,7 +2,7 @@
 
 ![](readme/screen.jpg)
 
-### Se it live [Match Pairs](https://match-pairs.000webhostapp.com/)
+### See it live [Match Pairs Game](https://match-pairs.000webhostapp.com/)
 -------------
 
 ### About
