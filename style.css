@@ -47,6 +47,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: calc(100vh - 10px);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .container {
@@ -220,7 +221,6 @@ body {
 
 .pTime {
   text-align: center;
-  width: 100%;
   color: #fdd257;
   font-weight: bold;
 }
@@ -441,6 +441,8 @@ div[class^="card"] {
   -ms-flex-align: center;
   align-items: center;
   padding: 0 5px;
+  text-shadow: 1px 1px 2px rgb(114 57 0 / 55%);
+  letter-spacing: 0.6px;
 }
 
 .footer {
