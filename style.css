@@ -217,6 +217,7 @@ body {
 
 .pText {
   width: 100%;
+  margin-bottom: 12px;
 }
 
 .pTime {
@@ -712,6 +713,7 @@ button {
   color: #723900;
   cursor: pointer;
   font-weight: bold;
+  padding: 8px 12px;
 }
 
 .startButton:hover {
@@ -745,6 +747,7 @@ button:focus {
   background-color: #65c9d1;
   border-color: #116d9c;
   color: white;
+  padding: 8px 12px;
 }
 
 .creditsBtn:hover {
