@@ -48,6 +48,7 @@ body {
   justify-content: center;
   min-height: calc(100vh - 10px);
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
 
 .container {
@@ -222,8 +223,9 @@ body {
 
 .pTime {
   text-align: center;
-  color: #fdd257;
+  color: #723900;
   font-weight: bold;
+  text-shadow: 1px 1px 2px rgb(255 255 255);
 }
 
 #playground {
@@ -442,7 +444,7 @@ div[class^="card"] {
   -ms-flex-align: center;
   align-items: center;
   padding: 0 5px;
-  text-shadow: 1px 1px 2px rgb(114 57 0 / 55%);
+  /* text-shadow: 1px 1px 2px rgb(114 57 0 / 55%); */
   letter-spacing: 0.6px;
 }
 
