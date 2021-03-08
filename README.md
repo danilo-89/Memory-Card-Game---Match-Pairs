@@ -2,7 +2,7 @@
 
 ![](readme/screen.jpg)
 
-### See it live [Match Pairs Game](https://match-pairs.000webhostapp.com/)
+### See it live [Match Pairs Game](https://danilo-89.github.io/projects/Memory-Card-Game---Match-Pairs/index.html)
 -------------
 
 ### About
