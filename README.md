@@ -1,4 +1,4 @@
-# Memory Card Game - Match-Pairs
+# Memory Card Game - Match Pairs
 
 ![](readme/screen.jpg)
 
