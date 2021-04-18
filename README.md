@@ -11,6 +11,7 @@
 - Completely in HTML, CSS and vanilla JavaScript;
 - Responsive design;
 - Working on Chrome, Firefox, Edge, IE(9>), Opera and Brave.
+- Personal high score is kept in browser's local storage
 
 ### Preview
 -------------
